@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 ssize_t readln(int fildes, void *buf, size_t nbyte){
     int i;
@@ -15,11 +16,12 @@ int main(int argc, char** argv){
     int z;
     int i=0;
     
-    z=readln(0,c,256);
+    z=readln(argv[1],c,256);
 
+    printf ("%d ", i+1);
     while(i<z){
-        write(1,(c+i),1);
-        i++;
+        write(1,c,z);
+        i+=z;
     }
     printf("\n");
 
