@@ -10,7 +10,7 @@ int main(){
 
     for(int i=1; i<= level ; i++){
 
-        if((pid==fork()) == 0){
+        if((pid=fork()) == 0){
 
             //codigo processo-filho
             printf("PID %d \n",getpid());
